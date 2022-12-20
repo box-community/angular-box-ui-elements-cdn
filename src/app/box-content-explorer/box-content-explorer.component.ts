@@ -41,7 +41,7 @@ export class BoxContentExplorerComponent implements OnInit {
 
     scriptElement.onload = () => {
       const contentExplorer = new Box.ContentExplorer();
-      contentExplorer.show(this.folderId, environment.BoxDeveloperTokent, {
+      contentExplorer.show(this.folderId, environment.BoxDeveloperToken, {
         container: '#box-content-explorer'
       });
     }
