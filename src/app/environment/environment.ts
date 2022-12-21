@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    BoxDeveloperToken: ''
+    BoxDeveloperToken: 'LXfe3rMcE4MlmasFeGdsVJtnait1KYHX'
 };

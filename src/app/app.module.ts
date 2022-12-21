@@ -3,16 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BoxComponent } from './box-component/box.component';
+import { BoxComponent } from './components/box-component/box.component';
+import { ContentExplorerComponent } from './pages/content-explorer/content-explorer.component';
+import { ContentUploaderComponent } from './pages/content-uploader/content-uploader.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BoxComponent
+    BoxComponent,
+    ContentExplorerComponent,
+    ContentUploaderComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

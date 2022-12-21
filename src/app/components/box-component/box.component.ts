@@ -1,7 +1,7 @@
-import { Component, OnInit, Renderer2, Input } from "@angular/core";
-import { environment } from '../environment/environment';
-import { HeadService } from "../services/head.service";
-import { BoxComponentsType } from '../types/box-component'
+import { Component, Renderer2, Input, AfterViewInit } from "@angular/core";
+import { environment } from '../../environment/environment';
+import { HeadService } from "../../services/head.service";
+import { BoxComponentsType } from '../../enums/box-component'
 
 declare let Box: any;
 
@@ -18,7 +18,7 @@ export interface BoxComponentInterface {
   styleUrls: ['./box.component.scss']
 })
 
-export class BoxComponent implements OnInit {
+export class BoxComponent implements AfterViewInit {
   @Input() componentData: BoxComponentInterface = {
     folderId: '',
     boxCdnJS: '',
@@ -28,10 +28,10 @@ export class BoxComponent implements OnInit {
 
   constructor(
     private renderer: Renderer2,
-    private headService: HeadService
+    private headService: HeadService,
   ) { }
 
-  ngOnInit() {
+  ngAfterViewInit() {
     if (this.componentData.name) {
       this.loadJs(this.componentData.boxCdnJS)
       this.loadCss(this.componentData.boxCdnCss)
@@ -48,20 +48,29 @@ export class BoxComponent implements OnInit {
   }
 
   private loadJs(src: string):void {
-    if (src === '' || this.headService.isScriptLoaded(src)) return
+    if (src === '') return
+    if (this.headService.isScriptLoaded(src)) {
+      this.initializeComponent()
+      return
+    }
     const scriptElement = this.headService.loadJsScript(this.renderer, src);
 
     scriptElement.onload = () => {
-      const contentUploader = new Box[this.componentData.name]();
-
-      contentUploader.show(this.componentData.folderId, environment.BoxDeveloperToken, {
-        container: `#${this.componentData.name.toLowerCase()}`
-      });
+      this.initializeComponent()
     }
 
     scriptElement.onerror = () => {
       console.warn(`Could not load ${this.componentData.name} Script!`);
     }
+  }
+
+  private initializeComponent(): void {
+    const boxComponentInstance = new Box[this.componentData.name]();
+
+
+    boxComponentInstance.show(this.componentData.folderId, environment.BoxDeveloperToken, {
+      container: `#${this.componentData.name.toLowerCase()}`
+    });
   }
 }
 

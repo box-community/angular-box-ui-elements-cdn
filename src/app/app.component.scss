@@ -20,6 +20,17 @@
     margin: 0;
   }
 
+  li {
+    padding: 10px 20px;
+    list-style: none;
+    font-size: 20px;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+  }
+
   .spacer {
     flex: 1;
   }
