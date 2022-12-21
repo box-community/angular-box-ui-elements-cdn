@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BoxComponent } from './box/box.component';
+import { BoxComponent } from './box-component/box.component';
 
 @NgModule({
   declarations: [
