@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BoxContentExplorerComponent } from './box-content-explorer/box-content-explorer.component';
+import { BoxComponent } from './box/box.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BoxContentExplorerComponent
+    BoxComponent
   ],
   imports: [
     BrowserModule,
