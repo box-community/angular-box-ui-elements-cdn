@@ -23,6 +23,12 @@ export class HeadService {
     return script;
   }
 
+  /**
+  * Append the CSS link to the Document Body.
+  * @param renderer The Angular Renderer
+  * @param href The path to the stylesheet
+  * @returns the link element
+  */
   public loadStylesheetLink(renderer: Renderer2, href: string): HTMLScriptElement {
     const link = renderer.createElement('link');
     link.rel = 'stylesheet';
