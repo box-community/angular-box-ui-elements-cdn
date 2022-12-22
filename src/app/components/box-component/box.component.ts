@@ -1,7 +1,7 @@
-import { Component, Renderer2, Input, AfterViewInit } from "@angular/core";
-import { environment } from '../../../environment/environment';
-import { HeadService } from "../../services/head.service";
-import { BoxComponentsType } from '../../enums/box-component'
+import { Component, Renderer2, Input, AfterViewInit } from '@angular/core';
+import { environment } from '@environment/environment';
+import { HeadService } from '@app/services/head.service';
+import { BoxComponentsType } from '@app/enums/box-component';
 
 declare let Box: any;
 
@@ -13,7 +13,7 @@ export interface BoxComponentInterface {
 }
 
 @Component({
-  selector: `box-component`,
+  selector: 'box-component',
   templateUrl: './box.component.html',
   styleUrls: ['./box.component.scss']
 })

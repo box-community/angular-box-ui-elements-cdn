@@ -3,9 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BoxComponent } from './components/box-component/box.component';
-import { ContentExplorerComponent } from './pages/content-explorer/content-explorer.component';
-import { ContentUploaderComponent } from './pages/content-uploader/content-uploader.component';
+import { BoxComponent } from '@app/components/box-component/box.component';
+import { ContentExplorerComponent } from '@app/pages/content-explorer/content-explorer.component';
+import { ContentUploaderComponent } from '@app/pages/content-uploader/content-uploader.component';
 
 @NgModule({
   declarations: [

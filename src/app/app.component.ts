@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { BoxComponentsType } from './enums/box-component';
 
 @Component({
   selector: 'app-root',

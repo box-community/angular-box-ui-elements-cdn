@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BoxComponent } from '../../components/box-component/box.component';
+import { BoxComponent } from '@app/components/box-component/box.component';
 
 @NgModule({
   declarations: [

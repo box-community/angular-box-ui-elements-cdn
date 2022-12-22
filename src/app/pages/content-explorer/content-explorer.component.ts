@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { BoxComponent } from 'src/app/components/box-component/box.component';
-import { BoxComponentsType } from '../../enums/box-component';
+import { BoxComponentsType } from '@app/enums/box-component';
 
 @Component({
   selector: 'content-explorer',
