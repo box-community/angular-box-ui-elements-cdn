@@ -31,11 +31,11 @@ export class HeadService {
     return link;
   }
 
-  public isScriptLoaded(src: string) {
+  public isScriptLoaded(src: string): boolean {
     return document.querySelectorAll(`script[src="${src}"]`).length > 0;
   }
 
-  public isStylesheetLoaded(href: string) {
+  public isStylesheetLoaded(href: string): boolean {
     return document.querySelectorAll(`link[href="${href}"]`).length > 0;
   }
 }
