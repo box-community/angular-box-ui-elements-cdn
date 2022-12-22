@@ -1,5 +1,7 @@
 # AngularBoxUiElementsCdn
 
+This project is a demo of using Box UI Elements with Angular.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
 
 ## Development server
