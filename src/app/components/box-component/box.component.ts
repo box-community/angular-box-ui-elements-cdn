@@ -1,5 +1,5 @@
 import { Component, Renderer2, Input, AfterViewInit } from "@angular/core";
-import { environment } from '../../environment/environment';
+import { environment } from '../../../environment/environment';
 import { HeadService } from "../../services/head.service";
 import { BoxComponentsType } from '../../enums/box-component'
 
