@@ -1,7 +1,7 @@
 import { Component, Renderer2, Input, AfterViewInit } from '@angular/core';
 import { environment } from '@environment/environment';
 import { HeadService } from '@app/services/head.service';
-import { BoxComponentsType } from '@app/enums/box-component';
+import { BoxComponentsType } from '@app/enums/box-component-enum';
 
 declare let Box: any;
 
@@ -15,7 +15,8 @@ export interface BoxComponentInterface {
 @Component({
   selector: 'box-component',
   templateUrl: './box.component.html',
-  styleUrls: ['./box.component.scss']
+  styleUrls: ['./box.component.scss'],
+  providers: [HeadService]
 })
 
 export class BoxComponent implements AfterViewInit {
@@ -66,7 +67,6 @@ export class BoxComponent implements AfterViewInit {
 
   private initializeComponent(): void {
     const boxComponentInstance = new Box[this.componentData.name]();
-
 
     boxComponentInstance.show(this.componentData.folderId, environment.BoxDeveloperToken, {
       container: `#${this.componentData.name.toLowerCase()}`

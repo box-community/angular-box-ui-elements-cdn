@@ -5,9 +5,7 @@ import { BoxComponent } from '@app/components/box-component/box.component';
   declarations: [
     BoxComponent
   ],
-  imports: [
-
-  ],
+  imports: [],
   providers: [],
   bootstrap: []
 })

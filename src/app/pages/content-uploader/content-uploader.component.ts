@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BoxComponentsType } from '@app/enums/box-component';
+import { BoxComponentsType } from '@app/enums/box-component-enum';
 
 @Component({
   selector: 'content-uploader',

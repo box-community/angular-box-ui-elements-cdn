@@ -1,7 +1,7 @@
 import { Renderer2, Inject, Injectable } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
-@Injectable({ providedIn: 'root' })
+@Injectable()
 
 export class HeadService {
  
