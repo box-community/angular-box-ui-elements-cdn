@@ -10,7 +10,7 @@ export class HeadService {
   ) { }
  
  /**
-  * Append the JS tag to the Document Body.
+  * Append the JS tag to the Document Head.
   * @param renderer The Angular Renderer
   * @param src The path to the script
   * @returns the script element
@@ -24,7 +24,7 @@ export class HeadService {
   }
 
   /**
-  * Append the CSS link to the Document Body.
+  * Append the CSS link to the Document Head.
   * @param renderer The Angular Renderer
   * @param href The path to the stylesheet
   * @returns the link element
