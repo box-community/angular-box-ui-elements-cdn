@@ -19,7 +19,7 @@ export class HeadService {
     const script = renderer.createElement('script');
     script.type = 'text/javascript';
     script.src = src;
-    renderer.appendChild(this.document.body, script);
+    renderer.appendChild(this.document.head, script);
     return script;
   }
 
@@ -33,7 +33,7 @@ export class HeadService {
     const link = renderer.createElement('link');
     link.rel = 'stylesheet';
     link.href = href;
-    renderer.appendChild(this.document.body, link);
+    renderer.appendChild(this.document.head, link);
     return link;
   }
 
