@@ -1,3 +1,8 @@
+<img src="/src/assets/box-dev-logo.png" 
+alt= "Box Dev Logo"
+style="margin-left:-10px;"
+width="40%">
+
 # AngularBoxUiElementsCdn
 
 This project is a demo of using Box UI Elements with Angular.
